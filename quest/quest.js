@@ -19,22 +19,22 @@ const h2 = document.createElement('h2');
 
 image.src = `../assets/quests/${quest.image}`;
 h2.textContent = quest.title;
-// console.log(image, h2);
+console.log(image, h2);
 
 const form = document.createElement('form');
 
 
-// for (let choice of quests.choices){
-//     const label = document.createElement('label');
-//     const radio = document.createElement('input');
+for (let choice of quest.choices){
+    const label = document.createElement('label');
+    const radio = document.createElement('input');
 
-//     radio.type = 'radio';
-//     radio.name = 'choice';
-//     radio.value = choice.id;
-//     label.append(choice.descriptio, radio);
-//     form.append(label);
+    radio.type = 'radio';
+    radio.name = 'choice';
+    radio.value = choice.id;
+    label.append(choice.description, radio);
+    form.append(label);
 
-// } console.log(form);
+} console.log(form);
 const button = document.createElement('button');
 button.textContent = 'Submit';
 
