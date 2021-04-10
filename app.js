@@ -12,6 +12,7 @@ form.addEventListener('submit', (event) => {
 
     const data = new FormData(form);
     const name = data.get('name');
+    console.log();
     const classForm = data.get('class');
    
 
@@ -23,4 +24,4 @@ form.addEventListener('submit', (event) => {
     }; console.log(user, classForm);
     setUser(user);
     window.location = './map';
-});console.log('hey from app.js');
+});console.log('hey from app.js',form);

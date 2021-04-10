@@ -1,7 +1,9 @@
 import { findById } from '../utilis.js';
 import quests from '../data.js';
 import { getUser, updateUserGivenChoice } from '../localStorage.js';
+import { renderHeader } from '../render-header.js';
 console.log('quest page');
+renderHeader();
 
 const section = document.querySelector('section');
 console.log(section);
@@ -18,7 +20,9 @@ const image = document.createElement('img');
 const h2 = document.createElement('h2');
 
 image.src = `../assets/quests/${quest.image}`;
+
 h2.textContent = quest.title;
+
 console.log(image, h2);
 
 const form = document.createElement('form');

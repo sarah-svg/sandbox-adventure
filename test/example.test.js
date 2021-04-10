@@ -2,6 +2,7 @@
 // import { example } from '../example.js';
 
 import { getUser, setUser, updateUserGivenChoice } from '../localStorage.js';
+import { findById } from '../utilis.js';
 
 const test = QUnit.test;
 
@@ -90,5 +91,15 @@ test('time to test a function gettem', (expect) => {
 
     //Expect
     // Make assertions about what is expected versus the actual result
+    expect.deepEqual(actual, expected);
+});
+
+test('time to test a function find by id', (expect) => {
+    const choice = [
+        { id: 1, type: 'string' },
+        { id: 2, type: 'object' }
+    ];
+    const expected = { id: 1, type: 'string' };
+    const actual = findById(choice, 1);
     expect.deepEqual(actual, expected);
 });
